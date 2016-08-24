@@ -5,5 +5,9 @@ export default Ember.Service.extend({
 
   add(book) {
     this.get('books').pushObject(book);
+  },
+
+  remove(book) {
+    this.get('books').removeObject(book);
   }
 });

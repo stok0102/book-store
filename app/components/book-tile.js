@@ -12,6 +12,10 @@ export default Ember.Component.extend({
 
     addToCart(book) {
       this.get('shoppingCart').add(book);
+    },
+
+    removeFromCart(book) {
+      this.get('shoppingCart').remove(book);
     }
   }
 });
