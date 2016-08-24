@@ -1,0 +1,15 @@
+body {
+  li {
+    list-style: none;
+  }
+}
+
+.book-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.book-list > * {
+  flex-basis: 10em;
+  flex-grow: 1;
+}
