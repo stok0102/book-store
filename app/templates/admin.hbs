@@ -1,3 +1,10 @@
 <h1>Admin</h1>
 
 {{new-book save="save"}}
+
+<div class="">
+  {{#each model as |book|}}
+    {{book-tile book=book destroyBook="destroyBook"}}
+    {{update-book book=book update="update"}}
+  {{/each}}
+</div>

@@ -1,0 +1,36 @@
+{{#if updateBookForm}}
+  <form>
+    <div class="">
+      <label for="title1">Title</label>
+      {{input value=title id="title1" placeholder=book.title}}
+    </div>
+    <div class="">
+      <label for="author1">Author</label>
+      {{input value=author id="author1" placeholder=book.author}}
+    </div>
+    <div class="">
+      <label for="price1">Price</label>
+      {{input value=price id="price1" placeholder=book.price}}
+    </div>
+    <div class="">
+      <label for="publishDate1">Publish Date</label>
+      {{input value=publishDate id="publishDate1" placeholder=book.publishDate}}
+    </div>
+    <div class="">
+      <label for="genre1">Genre</label>
+      {{input value=genre id="genre1" placeholder=book.genre}}
+    </div>
+    <div class="">
+      <label for="description1">Description</label>
+      {{input value=description id="description1" placeholder=book.description}}
+    </div>
+    <div class="">
+      <label for="image1">Image URL</label>
+      {{input value=image id="image1" placeholder=book.image}}
+    </div>
+
+    <button {{action 'update' book}}>Update Book</button>
+  </form>
+{{else}}
+  <button {{action 'updateBookForm'}}>Update</button>
+{{/if}}

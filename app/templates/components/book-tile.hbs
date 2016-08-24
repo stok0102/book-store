@@ -1,9 +1,8 @@
 <div class="book-tile">
-  <h3>{{book.title}}</h3>
+  <h3>{{#link-to 'book' book.id}}{{book.title}}{{/link-to}}</h3>
   <img src={{book.image}} alt={{book.title}} />
   <h4>{{book.author}}</h4>
-  <p>{{book.publishDate}}</p>
-  <p>{{book.price}}</p>
-  <p>{{book.genre}}</p>
-  <p>{{book.description}}</p>
+  <button {{action 'delete' book}}>Delete</button>
+
+  <button {{action 'addToCart' book}}>Add to Cart</button>
 </div>
