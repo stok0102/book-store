@@ -1,9 +1,7 @@
 <h1>Book Store</h1>
 
 <div class="book-list">
-  <ul>
     {{#each model as |book|}}
-      <li>{{book-tile book=book}}</li>
+      {{book-tile book=book}}
     {{/each}}
-  </ul>
 </div>
