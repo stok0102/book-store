@@ -1,0 +1,22 @@
+{{#if addNewFeedback}}
+  <form>
+    <div class="">
+      <label for="name">Name</label>
+      {{input value=name id="name"}}
+    </div>
+
+    <div class="">
+      <label for="comment">Comment</label>
+      {{input value=comment id="comment"}}
+    </div>
+
+    <div class="">
+      <label for="rating">Rating (1-5)</label>
+      {{input type=number value=rating id="rating"}}
+    </div>
+
+    <button {{action 'save' feedback}}>Add Review</button>
+  </form>
+{{else}}
+  <button {{action 'showFeedbackForm'}}>Add Feedback</button>
+{{/if}}

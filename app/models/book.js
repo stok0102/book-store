@@ -8,10 +8,10 @@ export default DS.Model.extend({
   genre: DS.attr(),
   description: DS.attr(),
   image: DS.attr(),
-  quantity: DS.attr(),
+  feedbacks: DS.hasMany('feedback', { async: true }),
 
   shoppingCart: Ember.inject.service(),
   inCart: Ember.computed('shoppingCart.books.[]', function() {
     return this.get('shoppingCart').includes(this);
   })
-});,
+});
