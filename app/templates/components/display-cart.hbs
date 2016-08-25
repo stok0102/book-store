@@ -1,3 +1,4 @@
+Current Total: {{shoppingCart.currentTotal}}
 {{#each shoppingCart.books as |book|}}
   <p>{{book.title}} -- {{book.price}} quantity: {{book.quantity}}</p>
   <button {{action 'remove' book}}>Remove Book</button>
