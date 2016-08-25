@@ -10,13 +10,8 @@ export default Ember.Service.extend({
 
 
     if (this.books.includes(book)) {
-      console.log('in cart');
-      console.log(book.quantity);
-      // book.quantity ++;
-      // Ember.set(book, 'quantity', 2);
       book.incrementProperty('quantity');
     } else {
-      console.log('empty');
       this.get('books').pushObject(book);
       book.quantity = 1;
     }
