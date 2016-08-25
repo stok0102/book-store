@@ -1,6 +1,5 @@
 @import "bootstrap";
 
-
 body {
   li {
     list-style: none;
@@ -15,4 +14,13 @@ body {
 .book-list > * {
   flex-basis: 10em;
   flex-grow: 1;
+
+  #delete-button {
+    display: none;
+  }
+}
+
+.map-display {
+  height: 600px;
+  width: 600px;
 }
